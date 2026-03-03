@@ -42,6 +42,11 @@ FOREIGN KEY (job_id) REFERENCES job_fact(job_id),
 FOREIGN KEY (skill_id) REFERENCES skill_dim(skill_id)
 );
 
+CREATE INDEX idx_company_id ON job_fact (company_id);
+CREATE INDEX idx_skill_id ON skill_job_dim (skill_id);
+CREATE INDEX idx_job_id ON skill_job_dim (job_id);
+
+
 
 
 
